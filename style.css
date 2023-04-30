@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #0091ff;
+  --color-success: #0fe90f;
+  --color-grey: #ccc;
+  --color-white: #fffefe;
+  --color-dark: #5d5b5b;
+  --color-warning: #dcdc2b;
+  --color-danger: #ec1616;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Bruno Ace', cursive;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.container {
+  width: 100%;
+  margin: 0 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5rem var(--color-grey);
+  height: 80vh;
+}
+
+.note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 3rem;
+}
+
+.note__message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 0.5rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1.3rem;
+  color: var(--color-white);
+}
+
+.close {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.note__text--area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.text--area {
+  font-size: 1.8rem;
+  padding: 0.7rem;
+  height: 7rem;
+  resize: none;
+  border: none;
+  border-top: 2px solid var(--color-grey);
+  border-bottom: 2px solid var(--color-grey);
+  outline: none;
+}
+
+.text--area:focus {
+  border-top: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.btn {
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid var(--color-grey);
+  transition: all 0.2s ease-out;
+}
+
+.btn--save-note {
+  color: var(--color-white);
+  background-color: var(--color-grey);
+  font-size: large;
+}
+
+.btn--save-note:hover {
+  background-color: var(--color-dark);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.note__app {
+  width: 100%;
+  height: 45vh;
+  overflow-y: scroll;
+}
+
+.note__box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid var(--color-dark);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.note__text {
+  flex: 0 0 80%;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  padding-left: 0.8rem;
+}
+
+.note__flex {
+  display: flex;
+  width: 100%;
+}
+
+.note__btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn--edit {
+  background-color: var(--color-warning);
+  margin-right: 1rem;
+}
+.btn--delete {
+  background-color: var(--color-danger);
+}
+
+.btn--edit,
+.btn--delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  width: 7rem;
+}
+
+.note__line {
+  margin: 2rem 0 0 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-dark);
+}
+
+.success {
+  background-color: var(--color-success);
+}
+
+.danger {
+  background-color: var(--color-danger);
+}
+
+.warning {
+  background-color: var(--color-warning);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 70%;
+  }
+
+  .note__btn {
+    flex-direction: row;
+    padding-right: 1rem;
+  }
+}
